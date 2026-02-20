@@ -1,0 +1,29 @@
+# Local configuration (users copy from config_template.m)
+switchbeta_config.m
+
+# Data directories (too large for GitHub)
+data/
+results/
+derivatives/
+
+# MATLAB temporary files
+*.asv
+*.m~
+*.autosave
+
+# Large data files
+*.mat
+*.set
+*.fdt
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE files
+.vscode/
+.idea/
+*.code-workspace

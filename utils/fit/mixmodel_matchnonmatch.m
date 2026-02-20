@@ -1,0 +1,1 @@
+p_nonmatch = (1-p_guess)*normcdf(x,sigma,thresh) + p_guess/2;
