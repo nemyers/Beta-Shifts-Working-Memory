@@ -18,13 +18,13 @@ ver
 
 ```bash
 # Copy the template
-cp config_template.m config.m
+cp switchbeta_config_template.m switchbeta_config.m
 
 # Edit config.m with your paths
-nano config.m  # or use your editor
+nano switchbeta_config.m  # or use your editor
 ```
 
-In `config.m`, update:
+In `switchbeta_config.m`, update:
 ```matlab
 paths.study = '/path/to/your/project';      % Where you cloned this repo
 paths.fieldtrip = '/path/to/fieldtrip';     % Where FieldTrip is installed
@@ -46,7 +46,7 @@ paths = config();
 switchbeta-analysis/
 │
 ├── README.md                    ← Start here for overview
-├── config_template.m            ← Copy this to config.m
+├── switchbeta_config_template.m            ← Copy this to switchbeta_config.m
 ├── CLEANING_GUIDE.md           ← How to clean remaining scripts
 ├── DEPENDENCIES.md             ← What external functions are needed
 │
@@ -93,21 +93,3 @@ figure2_tf_switch_plot;
 figure3_tf_itemdistance_plot;
 figure4_decoding_correlation_plot;
 ```
-
-## What Each Figure Shows
-
-**Figure 1** - Behavioral switch costs
-- Do switches hurt performance?
-- Does item similarity matter?
-
-**Figure 2** - Oscillatory power changes during switches
-- Beta decreases, theta increases on switches
-- Spatial topography of effects
-
-**Figure 3** - Beta power scales with update magnitude
-- Bigger switches → more beta desynchronization
-- Theta doesn't scale the same way
-
-**Figure 4** - Beta power predicts decoding strength
-- Lower beta → better decoding of new item
-- Specific to newly prioritized item
