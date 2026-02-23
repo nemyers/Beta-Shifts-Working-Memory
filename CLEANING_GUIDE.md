@@ -248,3 +248,23 @@ If unclear about any of these guidelines:
 1. Look at the cleaned figure3_tf_itemdistance_calculate.m as a reference
 2. Check MATLAB style guides (MathWorks has good ones)
 3. Prioritize readability - future you will thank you!
+
+## Checking for Missing Functions
+
+To find all undefined functions in your scripts, run:
+
+```matlab
+% Check for undefined functions
+all_scripts = dir('*.m');
+for i = 1:length(all_scripts)
+    fprintf('Checking %s...\n', all_scripts(i).name);
+    [fList, pList] = matlab.codetools.requiredFilesAndProducts(all_scripts(i).name);
+    
+    % Find functions not in MATLAB path
+    for j = 1:length(fList)
+        if ~exist(fList{j}, 'file')
+            warning('Missing function: %s', fList{j});
+        end
+    end
+end
+```

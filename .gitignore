@@ -1,5 +1,8 @@
 # Local configuration (users copy from config_template.m)
 switchbeta_config.m
+CLEANING_GUIDE.md
+FINAL_SUMMARY.md
+SUMMARY.md
 
 # Data directories (too large for GitHub)
 data/
