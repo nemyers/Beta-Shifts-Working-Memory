@@ -23,8 +23,8 @@ The code depends on several custom analysis functions, which are included in uti
 
 1. **Clone this repository:**
    ```bash
-   git clone https://github.com/yourusername/switchbeta-analysis
-   cd switchbeta-analysis
+   git clone https://github.com/yourusername/Beta-Shifts-Working-Memory
+   cd Beta-Shifts-Working-Memory
    ```
 
 2. **Configure paths:**
